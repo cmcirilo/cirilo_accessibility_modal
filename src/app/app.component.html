@@ -22,6 +22,10 @@
     <input id="age" />
   </div>
 
+  <label for="info">Subscribe to newsletter</label>
+  <input id="info" type="checkbox" (change)="info = !info" />
+  <p *ngIf="info">This is a placeholder for more information</p>
+
   <div class="button-group">
     <button class="button button-primary" type="button">Submit</button>
     <button
