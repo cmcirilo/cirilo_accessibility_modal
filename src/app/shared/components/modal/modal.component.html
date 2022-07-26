@@ -1,5 +1,14 @@
-<div class="modal-overlay" (click)="modalRef.close()">
-  <div appFocusTrap class="modal-content" (click)="$event.stopPropagation()">
+<div
+  class="modal-overlay"
+  (click)="modalRef.close()"
+  (keydown.esc)="modalRef.close()"
+>
+  <div
+    appFocusTrap
+    appFocusBack
+    class="modal-content"
+    (click)="$event.stopPropagation()"
+  >
     <h1 class="modal-title">
       {{ config.title }}
     </h1>
